@@ -123,6 +123,38 @@ img {
   }
 }
 
+@media (max-width: 600px) {
+  .site-nav {
+    margin-left: 1rem;   /* gives space between logo and dots */
+  }
+}
+
+.header-container {
+  gap: 0.8rem;            /* adds spacing between logo + menu */
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    gap: 1rem;           /* more breathing room */
+  }
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    margin-left: 0.8rem;      /* create space so dot does not touch Pemmi */
+  }
+
+  .site-nav li a {
+    font-size: 0.9rem;        /* reduce size to avoid crowding */
+  }
+
+  .site-nav ul {
+    gap: 1rem;                /* reduce space between menu items */
+    flex-wrap: wrap;          /* allow wrapping */
+    justify-content: center;
+  }
+}
+
 /* Hero */
 .hero {
   background-image: url('images/hero.png');

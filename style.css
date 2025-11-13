@@ -1,0 +1,485 @@
+/*
+  Pemmi Studio Website v2
+  A fresh, contemporary design with a pastel palette and full‑width hero
+  background. This stylesheet utilises CSS variables for easy theming
+  and responsive layouts for all devices.
+*/
+
+:root {
+  --primary: #f5eae4; /* light cream */
+  --secondary: #fdebe5; /* soft blush */
+  --accent: #c3a38e; /* muted gold */
+  --highlight: #f7c8d2; /* subtle pink */
+  --dark: #2f2f2f;
+  --heading-font: 'Playfair Display', serif;
+  --body-font: 'Montserrat', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--dark);
+  background-color: var(--primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.site-header {
+  background-color: var(--primary);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+/* Logo */
+.brand {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.brand-script {
+  font-family: 'Allura', cursive;
+  font-size: 3rem;
+  color: #b27866;  /* improved rose-gold */
+  margin-bottom: -4px;
+}
+
+.brand-small {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+  color: #b27866;
+  margin-left: 2px;
+}
+
+/* Navigation */
+.site-nav ul {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-nav li a {
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.site-nav li a:hover {
+  color: var(--accent);
+}
+
+/* Desktop improvements */
+@media (min-width: 992px) {
+
+  .brand-script {
+    font-size: 3.2rem;     /* larger on desktop */
+  }
+
+  .brand-small {
+    font-size: 1rem;
+    letter-spacing: 5px;
+  }
+
+  .header-container {
+    padding: 1.5rem 0;
+    justify-content: flex-start;
+  }
+
+  .site-nav {
+    margin-left: auto;
+  }
+}
+
+/* Hero */
+.hero {
+  background-image: url('images/hero.png');
+  background-size: cover;         /* fills entire section */
+  background-repeat: no-repeat;
+  background-position: center;    /* centers the image nicely */
+  min-height: 90vh;               /* taller, more luxurious look */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;    /* keeps text on left */
+  padding-left: 5%;               /* adds spacing */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.55),
+    rgba(255, 255, 255, 0.15)
+  );
+  backdrop-filter: blur(1px);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+  z-index: 1;
+  animation: fadeUp 1.2s ease-out;  /* smooth entry effect */
+}
+
+/* Soft text shadow for depth */
+.hero-content h2 {
+  font-family: var(--heading-font);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--dark);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Slightly lighter paragraph tone for elegance */
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/* Fade-up animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #af8a71;
+}
+
+/* About */
+.about {
+  padding: 4rem 0;
+}
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-text {
+  flex: 1 1 50%;
+}
+
+.about-text h2 {
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.05rem;
+  max-width: 500px;
+}
+
+.about-image {
+  flex: 1 1 45%;
+}
+
+.about-image img {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Services */
+.services {
+  background-color: var(--secondary);
+  padding: 4rem 0;
+}
+
+.services h2 {
+  font-family: var(--heading-font);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.service-item {
+  background-color: var(--primary);
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.service-item img {
+  width: 80px;
+  margin: 0 auto 1rem;
+}
+
+.service-item h3 {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.service-item p {
+  font-size: 0.95rem;
+}
+
+/* Gallery */
+.gallery {
+  padding: 4rem 0;
+}
+
+.gallery h2 {
+  font-family: var(--heading-font);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.gallery p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-grid img {
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Testimonials */
+.testimonials {
+  background-color: var(--secondary);
+  padding: 4rem 0;
+}
+
+.testimonials h2 {
+  font-family: var(--heading-font);
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+}
+
+.testimonial-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial-list blockquote {
+  background-color: var(--primary);
+  border-left: 4px solid var(--accent);
+  padding: 1.5rem;
+  font-style: italic;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-list footer {
+  margin-top: 0.5rem;
+  text-align: right;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* Contact */
+.contact {
+  padding: 4rem 0;
+  background-color: var(--primary);
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-container h2 {
+  font-family: var(--heading-font);
+  font-size: 2.5rem;
+}
+
+.contact-container p {
+  text-align: center;
+  max-width: 600px;
+}
+
+.contact-details-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contact-info {
+  flex: 1 1 40%;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.contact-info a {
+  color: var(--dark);
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: var(--dark);
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+}
+
+.contact-form {
+  flex: 1 1 55%;
+  background-color: var(--secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: var(--accent);
+}
+
+.contact-form button {
+  background-color: var(--accent);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #af8a71;
+}
+
+/* Footer */
+.site-footer {
+  background-color: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.site-footer p {
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    background-position: center;
+    min-height: 60vh;
+  }
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-text,
+  .about-image {
+    flex: 1 1 100%;
+  }
+  .contact-details-form {
+    flex-direction: column;
+  }
+  .contact-info,
+  .contact-form {
+    flex: 1 1 100%;
+  }
+}

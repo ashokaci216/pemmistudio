@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pemmi Studio Gallery</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NEXYFBR6Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5NEXYFBR6Y');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-M07f1vlj9hYi4wb0yps7+NbaY9qiKpN+TeUxZ4Z5Wzq7wYaT5zkNPL3wRSZCWN15FsMBrhj5iXfVPByt0mlPVw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-container">
+        <div class="brand">
+          <span class="brand-script">Pemmi</span>
+          <span class="brand-small">STUDIO</span>
+        </div>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./gallery.html" class="active">Gallery</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-content">
+          <h1>Gallery</h1>
+          <p>Explore some of our signature looks and studio work.</p>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="container">
+          <div class="gallery-page-grid">
+            <figure>
+              <img src="images/nails.png" alt="Signature nail styling" />
+              <figcaption>Elegant nail styling</figcaption>
+            </figure>
+            <figure>
+              <img src="images/makeup.png" alt="Makeup artistry showcase" />
+              <figcaption>Refined makeup artistry</figcaption>
+            </figure>
+            <figure>
+              <img src="images/spa.png" alt="Beauty treatment and skin care" />
+              <figcaption>Beauty and skin care moments</figcaption>
+            </figure>
+            <figure>
+              <img src="images/hero.png" alt="Studio beauty essentials" />
+              <figcaption>Studio beauty essentials</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2025 Pemmi Studio. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

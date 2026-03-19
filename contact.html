@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Pemmi Studio</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5NEXYFBR6Y"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-5NEXYFBR6Y');
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha512-M07f1vlj9hYi4wb0yps7+NbaY9qiKpN+TeUxZ4Z5Wzq7wYaT5zkNPL3wRSZCWN15FsMBrhj5iXfVPByt0mlPVw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-container">
+        <div class="brand">
+          <span class="brand-script">Pemmi</span>
+          <span class="brand-small">STUDIO</span>
+        </div>
+        <nav class="site-nav">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./gallery.html">Gallery</a></li>
+            <li><a href="./pricing.html">Pricing</a></li>
+            <li><a href="./contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-content">
+          <h1>Contact Pemmi Studio</h1>
+          <p>
+            Reach out for appointments, service questions, and bridal or occasion enquiries. We
+            would be happy to help you plan your visit.
+          </p>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="container contact-container">
+          <h2>Book an Appointment</h2>
+          <p>
+            To request an appointment or ask a question, please fill out the form below. We'll
+            confirm your booking via email or phone.
+          </p>
+          <div class="contact-details-form">
+            <div class="contact-info">
+              <p><strong>Address:</strong> A-4, Mafco Market, Sector 18, Vashi, Navi Mumbai 400705, Maharashtra</p>
+              <p><strong>Phone:</strong> <a href="tel:+911234567890">+91 9867378209</a></p>
+              <p><strong>Email:</strong> <a href="mailto:info@pemmistudio.com">info@pemmistudio.com</a></p>
+              <div class="social-links">
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              </div>
+            </div>
+            <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+              <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="input-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+              <div class="input-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date" />
+              </div>
+              <div class="input-group">
+                <label for="time">Preferred Time</label>
+                <input type="time" id="time" name="time" />
+              </div>
+              <div class="input-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Let us know what services you are interested in" required></textarea>
+              </div>
+              <button type="submit" class="btn">Request Appointment</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; 2025 Pemmi Studio. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function sendToWhatsApp(event) {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const date = document.getElementById('date').value;
+        const time = document.getElementById('time').value;
+        const message = document.getElementById('message').value;
+
+        const whatsappNumber = "919867378209"; // update this number
+
+        let text = `*New Appointment Request*
+
+*Name:* ${name}
+*Email:* ${email}
+*Phone:* ${phone}
+*Preferred Date:* ${date || "-"}
+*Preferred Time:* ${time || "-"}
+*Message:* ${message}
+`;
+
+        const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
+        window.open(url, "_blank");
+
+        alert("Thank you! Your request is on the way. We'll get back to you soon to confirm your appointment.");
+      }
+    </script>
+  </body>
+</html>

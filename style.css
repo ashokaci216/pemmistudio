@@ -628,6 +628,11 @@ img {
   margin-bottom: 1rem;
 }
 
+.pricing-hero-copy {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
 .detail-card ul,
 .info-list,
 .pricing-card ul {
@@ -669,6 +674,74 @@ img {
   font-size: 0.95rem;
 }
 
+.pricing-section .pricing-grid {
+  align-items: stretch;
+}
+
+.pricing-section {
+  padding-top: 3.25rem;
+}
+
+.pricing-section .pricing-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 2.15rem 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pricing-section .pricing-card h3 {
+  font-size: 1.55rem;
+  margin-bottom: 1rem;
+}
+
+.pricing-section .pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.07);
+}
+
+.pricing-grid--services .pricing-card ul {
+  margin-bottom: 0;
+}
+
+.pricing-grid--services .pricing-card li:last-child {
+  margin-bottom: 0;
+}
+
+.pricing-price {
+  margin-top: auto;
+  margin-bottom: 0;
+  padding-top: 1.35rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.pricing-price strong {
+  color: rgba(76, 52, 46, 0.92);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.pricing-packages {
+  margin-top: 4.5rem;
+}
+
+.pricing-packages-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.pricing-grid--packages .pricing-card {
+  justify-content: space-between;
+}
+
+.package-description {
+  margin-bottom: 0;
+  line-height: 1.7;
+}
+
 .cta-strip {
   text-align: center;
   background-color: var(--secondary);
@@ -684,6 +757,21 @@ img {
 
 .cta-strip p {
   margin-bottom: 1.25rem;
+}
+
+.pricing-cta-note {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.pricing-cta {
+  padding: 2.9rem 2.25rem;
+}
+
+.pricing-cta-section {
+  padding-top: 4rem;
 }
 
 .contact-panel {

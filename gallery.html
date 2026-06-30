@@ -44,45 +44,156 @@
             <li><a href="./contact.html">Contact</a></li>
           </ul>
         </nav>
+        <a class="header-cta" href="https://wa.me/919867378209?text=Hi%20Pemmi%20Studio%2C%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
       </div>
     </header>
 
     <main>
       <section class="page-hero">
         <div class="container page-hero-content">
-          <h1>Gallery</h1>
-          <p>Explore some of our signature looks and studio work.</p>
+          <h1>Nail Art Gallery</h1>
+          <p>Explore handcrafted nail designs from Pemmi Studio&rsquo;s premium nail collection.</p>
         </div>
       </section>
 
       <section class="page-section">
         <div class="container">
+          <p class="gallery-page-intro">Each design is created with attention to colour balance, finishing and detail for bridal, festive and everyday looks.</p>
           <div class="gallery-page-grid">
-            <figure>
-              <img src="images/nails.png" alt="Signature nail styling" />
-              <figcaption>Elegant nail styling</figcaption>
+            <figure class="gallery-page-card">
+              <button class="lightbox-trigger" type="button" data-lightbox-src="images/gallery/nails/burgundy-blossom.jpg" data-lightbox-caption="Burgundy Blossom" aria-label="View Burgundy Blossom nail art larger">
+                <img src="images/gallery/nails/burgundy-blossom.jpg" alt="Burgundy Blossom nail art by Pemmi Studio" />
+              </button>
+              <figcaption>
+                <span>Burgundy Blossom</span>
+                <small>Festive Nails</small>
+              </figcaption>
             </figure>
-            <figure>
-              <img src="images/makeup.png" alt="Makeup artistry showcase" />
-              <figcaption>Refined makeup artistry</figcaption>
+            <figure class="gallery-page-card">
+              <button class="lightbox-trigger" type="button" data-lightbox-src="images/gallery/nails/cherry-ribbon.jpg" data-lightbox-caption="Cherry Ribbon" aria-label="View Cherry Ribbon nail art larger">
+                <img src="images/gallery/nails/cherry-ribbon.jpg" alt="Cherry Ribbon nail art by Pemmi Studio" />
+              </button>
+              <figcaption>
+                <span>Cherry Ribbon</span>
+                <small>Coquette Nails</small>
+              </figcaption>
             </figure>
-            <figure>
-              <img src="images/spa.png" alt="Beauty treatment and skin care" />
-              <figcaption>Beauty and skin care moments</figcaption>
+            <figure class="gallery-page-card">
+              <button class="lightbox-trigger" type="button" data-lightbox-src="images/gallery/nails/parisian-bow.jpg" data-lightbox-caption="Parisian Bow" aria-label="View Parisian Bow nail art larger">
+                <img src="images/gallery/nails/parisian-bow.jpg" alt="Parisian Bow nail art by Pemmi Studio" />
+              </button>
+              <figcaption>
+                <span>Parisian Bow</span>
+                <small>French Bow Nails</small>
+              </figcaption>
             </figure>
-            <figure>
-              <img src="images/hero.png" alt="Studio beauty essentials" />
-              <figcaption>Studio beauty essentials</figcaption>
+            <figure class="gallery-page-card">
+              <button class="lightbox-trigger" type="button" data-lightbox-src="images/gallery/nails/royal-ember.jpg" data-lightbox-caption="Royal Ember" aria-label="View Royal Ember nail art larger">
+                <img src="images/gallery/nails/royal-ember.jpg" alt="Royal Ember nail art by Pemmi Studio" />
+              </button>
+              <figcaption>
+                <span>Royal Ember</span>
+                <small>Royal Collection</small>
+              </figcaption>
             </figure>
+            <figure class="gallery-page-card">
+              <button class="lightbox-trigger" type="button" data-lightbox-src="images/gallery/nails/ruby-chrome.jpg" data-lightbox-caption="Ruby Chrome" aria-label="View Ruby Chrome nail art larger">
+                <img src="images/gallery/nails/ruby-chrome.jpg" alt="Ruby Chrome nail art by Pemmi Studio" />
+              </button>
+              <figcaption>
+                <span>Ruby Chrome</span>
+                <small>Chrome Nails</small>
+              </figcaption>
+            </figure>
+            <figure class="gallery-page-card">
+              <button class="lightbox-trigger" type="button" data-lightbox-src="images/gallery/nails/velvet-ribbon.jpg" data-lightbox-caption="Velvet Ribbon" aria-label="View Velvet Ribbon nail art larger">
+                <img src="images/gallery/nails/velvet-ribbon.jpg" alt="Velvet Ribbon nail art by Pemmi Studio" />
+              </button>
+              <figcaption>
+                <span>Velvet Ribbon</span>
+                <small>Bow Nail Art</small>
+              </figcaption>
+            </figure>
+          </div>
+          <p class="gallery-page-note">Bridal makeup and hair portfolio will be added soon. For party and bridal makeup enquiries, contact us on WhatsApp.</p>
+          <div class="gallery-page-action">
+            <a class="btn" href="https://wa.me/919867378209?text=Hi%20Pemmi%20Studio%2C%20I%20want%20to%20book%20an%20appointment." target="_blank" rel="noopener">Book on WhatsApp</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <div class="container">
-        <p>&copy; 2025 Pemmi Studio. All rights reserved.</p>
+
+    <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+      <div class="image-lightbox__panel" role="dialog" aria-modal="true" aria-label="Nail art preview">
+        <button class="image-lightbox__close" type="button" aria-label="Close image preview">&times;</button>
+        <img class="image-lightbox__image" src="" alt="" />
+        <p class="image-lightbox__caption"></p>
+      </div>
+    </div>    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h2>Pemmi Studio</h2>
+          <p>Nails &bull; Beauty &bull; Makeup</p>
+          <p>Vashi, Navi Mumbai</p>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./services.html">Services</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./pricing.html">Pricing</a>
+            <a href="./contact.html">Contact</a>
+          </nav>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>&copy; 2026 Pemmi Studio. All rights reserved.</p>
       </div>
     </footer>
-  </body>
+  <script>
+  (function () {
+    const lightbox = document.getElementById('imageLightbox');
+    if (!lightbox) return;
+
+    const image = lightbox.querySelector('.image-lightbox__image');
+    const caption = lightbox.querySelector('.image-lightbox__caption');
+    const closeButton = lightbox.querySelector('.image-lightbox__close');
+    const triggers = document.querySelectorAll('.lightbox-trigger');
+    let previousFocus = null;
+
+    function openLightbox(trigger) {
+      previousFocus = document.activeElement;
+      image.src = trigger.dataset.lightboxSrc;
+      image.alt = trigger.querySelector('img')?.alt || trigger.dataset.lightboxCaption || 'Nail art preview';
+      caption.textContent = trigger.dataset.lightboxCaption || '';
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('lightbox-open');
+      closeButton.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('lightbox-open');
+      image.src = '';
+      if (previousFocus) previousFocus.focus();
+    }
+
+    triggers.forEach((trigger) => {
+      trigger.addEventListener('click', () => openLightbox(trigger));
+    });
+
+    closeButton.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (event) => {
+      if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && lightbox.classList.contains('is-open')) closeLightbox();
+    });
+  })();
+</script>  </body>
 </html>
